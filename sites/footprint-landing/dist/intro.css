@@ -1,0 +1,16 @@
+.opening{position:relative;isolation:isolate;overflow:hidden;background:#203426}
+.opening>.forest-wallpaper{position:absolute;inset:0;width:100%;height:100%;border-radius:0;box-shadow:none;z-index:0;background:#203426}
+.opening .forest-wallpaper .intro-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;opacity:.86}
+.opening .forest-wallpaper::after{background:linear-gradient(90deg,#071a16a6 0%,#11231945 55%,#152b201a),linear-gradient(0deg,#15291f55,transparent 50%)}
+.opening .header{position:relative;z-index:2;color:#f9faf1}
+.opening .brand-mark{color:var(--ink)}
+.opening .store{background:#1e2c24dc;border:1px solid #ffffff30;backdrop-filter:blur(12px)}
+.opening .landing-intro.wrap{display:flex;align-items:center;min-height:470px;gap:0;text-align:left;pointer-events:none;padding:70px 0 100px;color:#f9faf1}
+.opening .intro-copy{position:relative;z-index:1;padding:0;min-width:0;pointer-events:auto}
+.opening .intro-copy .eyebrow{color:#e6eddb;letter-spacing:2px}
+.opening .landing-intro .intro-copy h1{font-size:clamp(48px,6vw,90px);font-weight:550;line-height:1.1;letter-spacing:-.055em;margin:24px 0 0;text-shadow:0 3px 28px #10231b38}
+.opening .intro-copy h1 span{white-space:nowrap}
+.opening .wallpaper-motion{right:clamp(20px,4vw,80px);bottom:24px;pointer-events:auto}
+@media(max-width:720px){.opening .landing-intro.wrap{min-height:350px;padding:45px 0 80px}.opening .landing-intro .intro-copy h1{font-size:clamp(28px,7.7vw,52px)}.opening .intro-copy .eyebrow{font-size:9px}.opening .forest-wallpaper .intro-photo{object-position:60% center}.opening .forest-wallpaper::after{background:linear-gradient(90deg,#071a1699,#11231940)}.opening .wallpaper-motion{bottom:18px}}
+
+.opening .intro-copy .eyebrow{font-size:clamp(16px,1.5vw,22px);letter-spacing:.5px;font-weight:500}

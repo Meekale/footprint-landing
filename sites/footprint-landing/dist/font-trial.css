@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&display=swap');
+
+/* Font preview only. Remove this stylesheet to restore DM Sans / Manrope. */
+body, button, input, select, textarea,
+h1, h2, h3, .brand, .footer-column h3,
+.calorie-ring strong, .calorie-ring small, .handwritten {
+  font-family: 'Newsreader', Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+/* Retain the original typography in the top header. */
+.header .brand { font-family: Manrope, sans-serif; }
+.header .store, .header nav, .header > .text-link { font-family: "DM Sans", sans-serif; }
+
+/* Match footer typography to the header while keeping Newsreader in the content. */
+footer, footer button, footer .footer-column h3 { font-family: "DM Sans", sans-serif; }
+footer .brand { font-family: Manrope, sans-serif; }

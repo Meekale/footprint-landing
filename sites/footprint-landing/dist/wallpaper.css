@@ -1,0 +1,22 @@
+.forest-wallpaper{position:relative;height:430px;overflow:hidden;border-radius:18px;background:#d4dfce;isolation:isolate;box-shadow:0 16px 45px #293b2110}
+.landing-intro .forest-wallpaper .intro-photo{width:100%;height:100%;border-radius:0;object-fit:cover;object-position:center;opacity:.86;filter:saturate(.95) contrast(1.03);transform:scale(1.12);animation:forest-drift 13s cubic-bezier(.37,0,.63,1) infinite alternate;will-change:transform}
+.forest-wallpaper::before{content:"";position:absolute;inset:-30%;z-index:1;pointer-events:none;background:conic-gradient(from 145deg at 75% 0%,transparent 0deg,#fff6ca45 10deg,transparent 16deg,#fff9d42b 23deg,transparent 33deg,#ffedac35 41deg,transparent 49deg);filter:blur(7px);mix-blend-mode:screen;animation:forest-light 8s ease-in-out infinite alternate}
+.forest-wallpaper::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#f5efda0a 30%,#1b38272b);z-index:3}
+.forest-mist{position:absolute;inset:-25%;pointer-events:none;z-index:2;will-change:transform;filter:blur(16px);background:radial-gradient(ellipse at 15% 75%,#edf5e575,transparent 38%),radial-gradient(ellipse at 65% 65%,#edf7e463,transparent 36%),radial-gradient(ellipse at 80% 90%,#f4faec6b,transparent 40%);animation:mist-drift 17s ease-in-out infinite alternate}
+.forest-mist.mist-back{inset:-40%;opacity:.6;filter:blur(24px);animation:mist-drift 23s ease-in-out infinite alternate-reverse;animation-delay:-9s;z-index:1}
+.forest-particles{position:absolute;inset:-15%;z-index:2;pointer-events:none;opacity:.6;background-image:radial-gradient(circle at 18% 24%,#fff6c8 0 1px,transparent 2px),radial-gradient(circle at 37% 72%,#fff8ce 0 1.5px,transparent 3px),radial-gradient(circle at 70% 45%,#fff7d7 0 1px,transparent 2px),radial-gradient(circle at 82% 80%,#fff5c6 0 1.5px,transparent 3px),radial-gradient(circle at 55% 18%,#fff9df 0 1px,transparent 2px);animation:forest-particles 11s ease-in-out infinite alternate;will-change:transform}
+.wallpaper-motion{position:absolute;right:16px;bottom:16px;width:36px;height:36px;display:grid;place-items:center;border:1px solid #ffffff60;background:#f5f4ecb3;backdrop-filter:blur(12px);border-radius:50%;color:#34432d;font-size:11px;z-index:4;box-shadow:0 2px 12px #0001}
+.forest-wallpaper.is-paused .intro-photo,.forest-wallpaper.is-paused::before,.forest-wallpaper.is-paused .forest-mist,.forest-wallpaper.is-paused .forest-particles{animation-play-state:paused}
+@keyframes forest-drift{0%{transform:scale(1.12) translate3d(-2%,1%,0)}50%{transform:scale(1.2) translate3d(0,-1%,0)}100%{transform:scale(1.28) translate3d(2%,-2%,0)}}
+@keyframes mist-drift{from{transform:translate3d(-7%,3%,0) scale(1);opacity:.45}to{transform:translate3d(9%,-3%,0) scale(1.15);opacity:.85}}
+@keyframes forest-light{from{transform:rotate(-7deg);opacity:.35}to{transform:rotate(5deg);opacity:.8}}
+@keyframes forest-particles{from{transform:translate3d(-1%,4%,0);opacity:.2}to{transform:translate3d(3%,-6%,0);opacity:.65}}
+@media(max-width:720px){.forest-wallpaper{height:300px;border-radius:15px}}
+.opening .forest-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;opacity:0;transition:opacity .9s ease;filter:saturate(.92) contrast(1.02);pointer-events:none}
+.opening .forest-wallpaper.is-video-playing .forest-video{opacity:.95}
+.opening .forest-wallpaper .intro-photo{transition:opacity .9s ease}
+.opening .forest-wallpaper.is-video-playing .intro-photo{opacity:0}
+.opening .forest-wallpaper.is-video-playing::before{display:none}
+.opening .forest-wallpaper.is-video-playing .forest-mist,.opening .forest-wallpaper.is-video-playing .forest-particles{display:none}
+@media(prefers-reduced-motion:reduce){.opening .forest-video{display:none}.opening .forest-wallpaper .intro-photo{opacity:.86;transition:none}}
+@media(prefers-reduced-motion:reduce){.landing-intro .forest-wallpaper .intro-photo,.forest-wallpaper::before,.forest-wallpaper .forest-mist,.forest-wallpaper .forest-particles{animation:none;will-change:auto}.landing-intro .forest-wallpaper .intro-photo{transform:none}.forest-mist{opacity:.3}.wallpaper-motion{display:none}}

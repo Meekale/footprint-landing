@@ -1,0 +1,24 @@
+# Dependencies and Python caches
+node_modules/
+__pycache__/
+*.py[cod]
+
+# Local browser checks and saved design experiments
+.browser-check/
+**/.design-previews/
+.sites-runtime/
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+.aws/
+
+# Generated deployment archives and logs
+*.tar.gz
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini

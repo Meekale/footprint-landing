@@ -1,0 +1,16 @@
+/* Reversible store badge preview. Original markup is saved in .design-previews/. */
+.opening .download-header{gap:20px}
+.opening .download-header .brand{flex-shrink:0}
+.opening .download-header .store-buttons{min-width:0;max-width:100%;gap:12px}
+.opening .download-header .store.store-badge{display:flex;flex:0 0 auto;align-items:center;justify-content:center;gap:9px;min-width:0;width:auto;max-width:100%;height:62px;padding:8px 15px;border:1.5px solid #a6a6a6;border-radius:11px;background:#000;color:#fff;backdrop-filter:none;box-shadow:none;font-family:'DM Sans',Arial,sans-serif;text-align:left;transition:background .2s,border-color .2s,transform .2s}
+.opening .download-header .store-badge-google{background:#10100f}
+.opening .download-header .store-badge>svg{display:block;flex:0 0 34px;width:34px;height:34px;align-self:center}
+.opening .download-header .store-badge>span{display:block;white-space:nowrap;min-width:0}
+.opening .download-header .store-badge small{display:block;font-size:12px;line-height:1.1;letter-spacing:0;font-weight:400;margin-bottom:2px}
+.opening .download-header .store-badge strong{display:block;font-size:24px;line-height:1.1;letter-spacing:-.7px;font-weight:500}
+.opening .download-header .store-badge:hover{filter:none;background:#171717;border-color:#dedede;transform:translateY(-1px)}
+@media(max-width:720px){.opening .download-header .store-buttons{gap:7px}.opening .download-header .store.store-badge{height:52px;padding:7px 10px;gap:7px;border-radius:9px}.opening .download-header .store-badge>svg,.opening .download-header .store-badge-google>svg{width:28px;height:28px;flex-basis:28px}.opening .download-header .store-badge strong{font-size:20px;letter-spacing:-.5px}}
+@media(max-width:480px){.opening .download-header{height:auto;flex-wrap:wrap;align-items:center;padding-block:18px;gap:14px}.opening .download-header .store-buttons{flex-basis:100%;flex-direction:row;flex-wrap:wrap;justify-content:flex-end;margin:0;gap:8px}}
+@media(prefers-reduced-motion:reduce){.opening .download-header .store-badge{transition:none}}
+
+@media(max-width:720px){.opening .download-header .store-badge small{font-size:10px;margin-bottom:1px}}
