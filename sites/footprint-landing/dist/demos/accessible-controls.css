@@ -1,0 +1,44 @@
+/* Keep the original phone layout, with clearer and easier-to-hit controls. */
+.primary,.secondary{min-height:42px;font-size:12px;padding:11px 10px;line-height:1.3;touch-action:manipulation}
+.primary{background:#b5ef35;color:#17260a;box-shadow:0 3px 10px #a3e63520;font-weight:700}
+.secondary{background:#2a3522;border-color:#718756;color:#eff8e5}
+.tabs button{min-height:40px;font-size:11px;padding:10px 6px;touch-action:manipulation}
+.tabs button.selected{color:#c7ff73;background:#a3e6352b;box-shadow:inset 0 0 0 1px #a3e63555}
+.select{min-height:40px;font-size:12px;border-color:#64784e}
+.reset{min-height:36px;padding:9px 6px;color:#b2bd9d;font-size:11px;touch-action:manipulation}
+.parts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+.parts button{min-height:33px;padding:8px 6px;font-size:11px;touch-action:manipulation}
+.parts button.selected{background:#b5ef35;color:#17260a}
+.badge{min-height:96px;touch-action:manipulation}.badge strong{font-size:10px}
+.upload{position:relative;min-height:42px;display:flex;align-items:center;justify-content:center;font-size:11px;border-color:#718756;color:#eff8e5}
+.upload input{display:block;position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.upload:focus-within,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #b5ef35;outline-offset:3px}
+.primary:hover:not(:disabled){background:#c7ff68}.secondary:hover:not(:disabled),.upload:hover{background:#35462a}
+button:disabled{opacity:.45;cursor:default}
+.compare-range{height:42px;appearance:none;background:transparent;cursor:ew-resize}
+.compare-range::-webkit-slider-runnable-track{height:7px;background:#485b35;border-radius:10px}
+.compare-range::-webkit-slider-thumb{appearance:none;width:25px;height:25px;margin-top:-9px;border-radius:50%;background:#b5ef35;border:3px solid #f1ffd9;box-shadow:0 1px 8px #0006}
+.compare-range::-moz-range-track{height:7px;background:#485b35;border-radius:10px}
+.compare-range::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#b5ef35;border:3px solid #f1ffd9}
+.pet-head::after{content:'Pet Pip';position:absolute;right:-8px;top:-2px;padding:5px 8px;border-radius:20px;background:#b5ef35;color:#17260a;font-family:App,Arial,sans-serif;font-size:10px;pointer-events:none;box-shadow:0 2px 8px #0002}
+/* Reserve space for the larger controls without adding inner scrolling. */
+.map-stage svg{height:105px}.boxing-stage{height:160px}.pose-stage{height:100px}.pose-stage svg{height:94px}
+.pet-stage{height:142px}.pet-stage>.pet-scale{transform:scale(.56)}.rank-stage{height:176px}.rank-stage>svg{height:172px}
+.comparison{height:218px}
+/* A brief alarm-like wiggle followed by a long pause, to hint at interactivity. */
+.primary:not(:disabled),.secondary:not(:disabled),.upload,.pet-head::after{
+  animation:preview-button-vibrate 4.8s linear 1.2s infinite;
+}
+.secondary:not(:disabled),.upload{animation-delay:1.55s}
+.primary:hover,.primary:focus-visible,.primary:active,
+.secondary:hover,.secondary:focus-visible,.secondary:active,
+.upload:hover,.upload:focus-within,.upload:active,
+.pet-head:hover::after,.pet-head:focus-visible::after,.pet-head:active::after{animation:none}
+@keyframes preview-button-vibrate{
+  0%,16%,100%{transform:translate3d(0,0,0)}
+  2%,6%,10%,14%{transform:translate3d(-3px,0,0)}
+  4%,8%,12%{transform:translate3d(3px,0,0)}
+}
+@media(prefers-reduced-motion:reduce){
+  .primary,.secondary,.upload,.pet-head::after{animation:none}
+}

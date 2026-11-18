@@ -161,6 +161,7 @@ if (track) {
     frame = requestAnimationFrame(() => { frame = undefined; update(); });
   }, { passive: true });
   track.addEventListener('keydown', event => {
+    if (event.target !== track && event.target.closest('input, select, textarea, button, [data-demo-controls]')) return;
     let target;
     if (event.key === 'ArrowRight') target = active + 1;
     if (event.key === 'ArrowLeft') target = active - 1;
@@ -174,7 +175,7 @@ if (track) {
     stop();
     cancelMove();
     if (event.pointerType !== 'mouse' || event.button !== 0) return;
-    if (event.target.closest('a, button, input')) return;
+    if (event.target.closest('a, button, input, select, textarea, label, [data-demo-controls]')) return;
     drag = { x: event.clientX, left: track.scrollLeft, moved: false };
     track.setPointerCapture(event.pointerId);
   });

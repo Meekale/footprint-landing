@@ -1,0 +1,28 @@
+.demo-controls{margin-top:27px;padding:19px;border:1px solid #c2d99b;border-radius:18px;background:#fbfef5e8;max-width:420px;font-family:'DM Sans',sans-serif;color:#293c1e}
+.demo-controls-heading{display:flex;align-items:center;gap:9px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:650;margin:0}.demo-controls-heading::before{content:"";width:8px;height:8px;background:#99d729;border-radius:50%;box-shadow:0 0 0 4px #e8f6ce;flex-shrink:0}
+.feature-slide .demo-controls-hint{font-family:'DM Sans',sans-serif;font-size:12px;line-height:1.6;letter-spacing:0;color:#637155;margin:9px 0 15px;max-width:none}
+.demo-control-tabs{display:grid;grid-template-columns:1fr 1fr;gap:5px;background:#e9f1dc;padding:4px;border-radius:13px;margin-bottom:13px}
+.demo-control-tabs button{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;min-height:42px;padding:9px 8px;border:0;border-radius:10px;background:transparent;color:#53683d;transition:background .15s,color .15s}
+.demo-control-tabs button[aria-pressed="true"]{background:#fff;color:#2c481a;box-shadow:0 2px 7px #36521b12}
+.demo-control-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
+.demo-control-button,.demo-upload{display:flex;align-items:center;justify-content:center;gap:7px;min-height:48px;padding:13px 16px;border:1px solid #b5cc95;border-radius:12px;background:#fff;color:#36521b;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;line-height:1.3;text-align:center;cursor:pointer;transition:background .15s,transform .15s}
+.demo-control-button.primary{background:#b5ef35;border-color:#a5d927;color:#223411;flex:1 1 150px}
+.demo-control-button.secondary{flex:1 1 110px;background:#eef5e3}
+.demo-control-button:hover:not(:disabled),.demo-upload:hover{background:#e2f6bc;transform:translateY(-1px);filter:none}
+.demo-control-button:active:not(:disabled),.demo-upload:active{transform:translateY(0)}
+.demo-controls button:disabled,.demo-controls input:disabled,.demo-controls select:disabled{opacity:.45;cursor:default}
+.demo-control-field{display:flex;flex-direction:column;gap:7px;font-size:11px;font-weight:600;color:#56683f}
+.demo-control-field select{width:100%;min-height:44px;padding:10px 12px;border:1px solid #bdceaa;border-radius:11px;background:#fff;color:#324821;font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer}
+.demo-control-status{display:block;font-size:12px;line-height:1.6;color:#46602e;min-height:33px;margin-top:12px;font-variant-numeric:tabular-nums}
+.demo-control-button.reset{display:inline-flex;align-items:center;min-height:40px;padding:8px 0;border:0;background:transparent;color:#61764c;text-decoration:underline;text-underline-offset:3px;font-family:'DM Sans',sans-serif;font-size:11px}
+.demo-controls [hidden]{display:none!important}
+.demo-compare-range{display:block;width:100%;height:36px;margin:5px 0;accent-color:#6eaa22;cursor:ew-resize}
+.demo-compare-range{appearance:none;background:transparent}.demo-compare-range::-webkit-slider-runnable-track{height:7px;border-radius:10px;background:#ccdfa9}.demo-compare-range::-webkit-slider-thumb{appearance:none;width:25px;height:25px;margin-top:-9px;border:3px solid #fff;border-radius:50%;background:#88c62b;box-shadow:0 1px 5px #2d4a1438}.demo-compare-range::-moz-range-track{height:7px;border-radius:10px;background:#ccdfa9}.demo-compare-range::-moz-range-thumb{width:20px;height:20px;border:3px solid #fff;border-radius:50%;background:#88c62b}
+.demo-range-labels{display:flex;justify-content:space-between;font-size:11px;color:#627251}
+.demo-upload{flex:1 1 120px;position:relative;overflow:hidden;font-size:12px;background:#eef5e3}
+.demo-upload input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.demo-upload:focus-within{outline:3px solid #8ba431;outline-offset:3px}
+.demo-control-button.is-ready{background:#9ee21b;box-shadow:0 0 0 4px #b5ef352b}
+@media(max-width:1000px){.demo-controls{padding:15px}.demo-control-button{font-size:12px;padding:12px}.feature-slide[data-feature]{min-height:750px}}
+@media(max-width:720px){.demo-controls{width:100%;max-width:none;margin-top:0;padding:15px}.demo-control-button{min-height:48px}.demo-control-tabs button{min-height:44px}.demo-control-field select{min-height:46px}.feature-slide[data-feature]{min-height:0}}
+@media(prefers-reduced-motion:reduce){.demo-control-button,.demo-upload,.demo-control-tabs button{transition:none}}

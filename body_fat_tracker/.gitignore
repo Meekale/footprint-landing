@@ -1,0 +1,13 @@
+.expo/
+node_modules/
+dist/
+ios/
+android/
+__pycache__/
+.venv/
+algorithm/models/*.task
+algorithm/models/*.download
+algorithm/models/calibration.json
+algorithm/data/
+algorithm/models/torso/
+algorithm/models/torso-*/

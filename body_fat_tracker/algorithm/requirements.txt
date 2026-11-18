@@ -1,0 +1,8 @@
+# Python 3.10–3.12. Install in a virtual environment.
+fastapi>=0.128,<1
+uvicorn>=0.40,<1
+mediapipe==0.10.21
+protobuf>=4.25.3,<5
+numpy>=1.26,<2
+pillow>=11,<13
+opencv-contrib-python>=4.10,<4.12

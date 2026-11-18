@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Body Fat Tracker",
+    "slug": "body-fat-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Body Fat Tracker to show your live camera preview.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Choose a torso photo to crop and analyze in Body Fat Tracker.",
+          "cameraPermission": "Allow Body Fat Tracker to show your live camera preview.",
+          "microphonePermission": false
+        }
+      ]
+    ]
+  }
+}

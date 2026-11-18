@@ -1,0 +1,33 @@
+/* Shared neon green palette across all five feature slides. */
+.feature-slide[data-feature]{--accent:#b5ef35;--accent-ink:#36521b;--accent-soft:#e0f0b9;--accent-pale:#fbfdf4;--accent-border:#c2d99b;--glow:#b5ef354d;background:radial-gradient(ellipse at 82% 62%,var(--glow),transparent 60%),linear-gradient(135deg,#fbfdf5,#edf4dd)}
+.feature-slide[data-feature]{border:1px solid var(--accent-border);box-shadow:0 10px 30px #26301f07}
+.feature-slide[data-feature] .feature-icon{background:var(--accent);border-color:transparent;color:var(--accent-ink);border-radius:11px;width:38px;height:38px;box-shadow:0 5px 12px var(--glow)}
+.feature-slide[data-feature] .card-top>span:last-child{color:var(--accent-ink);background:var(--accent-soft);padding:8px 11px;border-radius:30px;font-weight:700;letter-spacing:1.2px}
+.feature-slide[data-feature] .slide-copy h3{color:var(--accent-ink)}
+.feature-slide[data-feature] .slide-copy p{color:#59604f}
+.feature-slide[data-feature] .slide-visual{position:relative;isolation:isolate}
+.feature-slide[data-feature] .slide-visual::before{content:"";position:absolute;width:80%;aspect-ratio:1;max-width:350px;border-radius:50%;background:var(--accent-soft);border:1px solid var(--accent-border);z-index:-1;opacity:.65;transform:rotate(-12deg);pointer-events:none}
+.feature-slide[data-feature] .demo-small{color:#606953}
+.feature-slide[data-feature] .calorie-ring{background:conic-gradient(var(--accent) 0 68%,var(--accent-soft) 68% 100%);box-shadow:0 10px 24px var(--glow)}
+.feature-slide[data-feature] .calorie-ring::before{background:var(--accent-pale)}
+.feature-slide[data-feature] .calorie-ring strong{color:var(--accent-ink)}
+.feature-slide[data-feature] .nutrition i{background:var(--accent)}
+.feature-slide[data-feature] .nutrition>span:nth-child(2) i{background:#7ba93a}
+.feature-slide[data-feature] .nutrition>span:nth-child(3) i{background:#a8c96c}
+.feature-slide[data-feature] .rep-demo,.feature-slide[data-feature] .planner-demo,.feature-slide[data-feature] .squad-preview{background:var(--accent-pale);border:1px solid var(--accent-border);box-shadow:0 18px 35px var(--glow)}
+.feature-slide[data-feature] .rep-demo>div:first-child>span,.feature-slide[data-feature] .circle-type{color:var(--accent-ink);font-weight:600}
+.feature-slide[data-feature] .rep-row em{background:var(--accent-soft);color:var(--accent-ink);border:1px solid var(--accent-border)}
+.feature-slide[data-feature] .rep-row,.feature-slide[data-feature] .planner-demo>div+div,.feature-slide[data-feature] .squad-person{border-color:var(--accent-border)}
+.feature-slide[data-feature] .mini-map{background:var(--accent-soft);border:1px solid var(--accent-border);box-shadow:0 18px 35px var(--glow)}
+.feature-slide[data-feature] .mini-map svg path[stroke="#778a3a"]{stroke:var(--accent)}
+.feature-slide[data-feature] .mini-map svg circle{fill:var(--accent)}
+.feature-slide[data-feature] .mini-map svg circle[stroke]{fill:#d2f34b;stroke:var(--accent)}
+.feature-slide[data-feature] .mini-map>span{color:var(--accent-ink);font-weight:500}
+.feature-slide[data-feature] .route-dot{border-color:var(--accent-ink)}
+.feature-slide[data-feature] .route-dot.finish{background:var(--accent);box-shadow:0 0 0 5px var(--accent-soft)}
+.feature-slide[data-feature] .planner-demo b{background:var(--accent);color:var(--accent-ink);border-radius:50%;width:25px;height:25px;display:grid;place-items:center}
+.feature-slide[data-feature] .squad-symbol,.feature-slide[data-feature] .handwritten,.feature-slide[data-feature] .squad-person b{color:var(--accent-ink)}
+.feature-slide[data-feature] .avatar{background:#ddf1b5;color:#3c5a1d}.feature-slide[data-feature] .av2{background:#c6e98e;color:#36521b}.feature-slide[data-feature] .av3{background:#b5ef35;color:#36521b}
+.slide-dot[data-slide]{--dot-accent:#9ad927}
+.carousel-pagination .slide-dot[aria-current="true"]::before{background:var(--dot-accent,#5a6946)}
+@media(max-width:720px){.feature-slide[data-feature] .card-top>span:last-child{font-size:8px;padding:7px 9px;letter-spacing:.8px}.feature-slide[data-feature] .feature-icon{width:34px;height:34px}.feature-slide[data-feature] .slide-visual::before{width:85%;max-width:270px}}
